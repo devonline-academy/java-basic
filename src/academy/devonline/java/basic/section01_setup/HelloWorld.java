@@ -14,6 +14,8 @@
  * limitations under the License.
  */
 
+package academy.devonline.java.basic.section01_setup;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java-basic
