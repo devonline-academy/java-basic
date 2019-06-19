@@ -22,65 +22,34 @@ package academy.devonline.java.basic.section03_expression;
  */
 public class TypeCast {
     public static void main(String[] args) {
-        // String, int, double, boolean, char
-        {
-            //toString
-            String is = String.valueOf(1);
-            String ds = String.valueOf(1.1);
-            String bs = String.valueOf(true);
-            String cs = String.valueOf('a');
+        // int, double, boolean, char, String
 
-            //fromString
-            int si = Integer.parseInt("1");
-            double sd = Double.parseDouble("1.1");
-            boolean sb = Boolean.parseBoolean("true");
-            char sc = "a".charAt(0);
-        }
-        //----------------------------------------
-        {
-            //toInt
-            int di = (int)1.1;
-            int si = Integer.parseInt("1");
-            /*! boolean -> int */
-            int ci = 'a';
-            //fromInt
-            String is = String.valueOf(1);
-            double id = 1;
-            /*! int -> boolean */
-            char ic = (char)97;
-        }
-        //----------------------------------------
-        {
-            //toDouble
-            double id = 1;
-            double sd = Double.parseDouble("1.1");
-            /*! boolean -> double */
-            double ci = 'a';//! nonsense
-            //fromDouble
-            String ds = String.valueOf(1.1);
-            int di = (int)1.1;
-            /*! double -> boolean */
-            char dc = (char)97.0;//! nonsense
-        }
-        //----------------------------------------
-        {
-            //toBoolean
-            boolean sb = Boolean.parseBoolean("true");
-            //fromBoolean
-            String bs = String.valueOf(true);
-        }
-        //----------------------------------------
-        {
-            //toChar
-            char ic = (char)97;
-            char dc = (char)97.0;//! nonsense
-            /*! boolean -> char */
-            char sc = "a".charAt(0);
-            //fromChar
-            int ci = 'a';
-            double cd = 'a';//! nonsense
-            /*! char -> boolean */
-            String cs = String.valueOf('a');
-        }
+        String is = String.valueOf(1);
+        String ds = String.valueOf(1.1);
+        String bs = String.valueOf(true);
+        String cs = String.valueOf('a');
+
+        System.out.println("Hello " + 1 + 1.1 + true + 'a');
+
+        int si = Integer.parseInt("12");
+        double sd = Double.parseDouble("1.2");
+        boolean sb = Boolean.parseBoolean("true");
+        char ch1 = "a".charAt(0);
+        char ch2 = "abc".charAt(1);
+        System.out.println(ch2);
+        //
+        char ch = 2;
+        int i = 4;
+        double d = 8;
+
+        d = i;
+        d = ch;
+        i = ch;
+
+        i = (int) d;
+        ch = (char) d;
+        ch = (char) i;
+
+        boolean b = true;
     }
 }
