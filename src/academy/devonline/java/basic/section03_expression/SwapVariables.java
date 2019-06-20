@@ -25,15 +25,10 @@ public class SwapVariables {
         var a = 2;
         var b = 5;
 
-        System.out.println("Init data:");
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-
         var temp = a;
         a = b;
         b = temp;
 
-        System.out.println("Result:");
         System.out.println("a = " + a);
         System.out.println("b = " + b);
     }
