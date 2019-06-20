@@ -23,14 +23,21 @@ import java.util.Scanner;
  * @author devonline
  * @link http://devonline.academy/java-basic
  */
-public class GuessTheNumber {
+public class GuessNumber {
     public static void main(String[] args) {
+        // read source data
         var number = new Random().nextInt(10);
         var userCase = new Scanner(System.in).nextInt();
+
+        // processing
+        String result;
         if (number == userCase) {
-            System.out.println("Congratulations, you guessed the number!");
+            result = "Congratulations, you guessed the number!";
         } else {
-            System.out.println("Sorry, but your number is invalid! Try again later...");
+            result = "Sorry, but your number is invalid! Try again later...";
         }
+
+        // display results
+        System.out.println(result);
     }
 }

@@ -22,10 +22,14 @@ package academy.devonline.java.basic.section04_conditional;
  */
 public class DisplayMaxNumber {
     public static void main(String[] args) {
+        // read source data
         var a = 50;
         var b = 6;
 
-        System.out.println("Max number: " + (a > b ? a : b));
-        System.out.println("Max number: " + Math.max(a, b));
+        // processing
+        var result = a > b ? a : b;
+
+        // display results
+        System.out.println(result);
     }
 }

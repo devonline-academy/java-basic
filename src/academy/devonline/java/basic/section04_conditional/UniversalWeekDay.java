@@ -22,9 +22,11 @@ package academy.devonline.java.basic.section04_conditional;
  */
 public class UniversalWeekDay {
     public static void main(String[] args) {
+        // read source data
         var day = 7;
         var isMondayFirst = true;
 
+        // processing
         var internalDay = day;
         if (!isMondayFirst) {
             internalDay--;
@@ -32,23 +34,26 @@ public class UniversalWeekDay {
                 internalDay = 7;
             }
         }
-
+        String result;
         if (internalDay == 1) {
-            System.out.println("Monday");
+            result = "Monday";
         } else if (internalDay == 2) {
-            System.out.println("Tuesday");
+            result = "Tuesday";
         } else if (internalDay == 3) {
-            System.out.println("Wednesday");
+            result = "Wednesday";
         } else if (internalDay == 4) {
-            System.out.println("Thursday");
+            result = "Thursday";
         } else if (internalDay == 5) {
-            System.out.println("Friday");
+            result = "Friday";
         } else if (internalDay == 6) {
-            System.out.println("Saturday");
+            result = "Saturday";
         } else if (internalDay == 7) {
-            System.out.println("Sunday");
+            result = "Sunday";
         } else {
-            System.out.println("Invalid day: " + day);
+            result = "Invalid day: " + day;
         }
+
+        // display results
+        System.out.println(result);
     }
 }

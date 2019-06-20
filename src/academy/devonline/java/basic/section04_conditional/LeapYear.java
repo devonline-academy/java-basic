@@ -22,22 +22,32 @@ package academy.devonline.java.basic.section04_conditional;
  */
 public class LeapYear {
     public static void main(String[] args) {
-        var year = 2019;
+        // read source data
+        var year = 2020;
 
-        if (year % 400 == 0) {
-            System.out.println(year + " is leap year");
+        // processing
+        boolean isLeap;
+        /*if (year % 400 == 0) {
+            isLeap = true;
         } else if (year % 100 == 0) {
-            System.out.println(year + " is not leap year");
+            isLeap = false;
         } else if (year % 4 == 0) {
-            System.out.println(year + " is leap year");
+            isLeap = true;
         } else {
-            System.out.println(year + " is not leap year");
-        }
+            isLeap = false;
+        }*/
 
-        if ((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))) {
-            System.out.println(year + " is leap year");
+        // processing 2
+        /*if ((year % 400 == 0) || ((year % 100 != 0 && (year % 4 == 0)))) {
+            isLeap = true;
         } else {
-            System.out.println(year + " is not leap year");
-        }
+            isLeap = false;
+        }*/
+
+        // processing 3
+        isLeap = (year % 400 == 0) || ((year % 100 != 0 && (year % 4 == 0)));
+
+        // display results
+        System.out.println(isLeap ? year + " is leap year" : year + " is not leap year");
     }
 }

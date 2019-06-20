@@ -22,40 +22,46 @@ package academy.devonline.java.basic.section04_conditional;
  */
 public class WeekDayWithSwitch {
     public static void main(String[] args) {
-        var day = 7;
+        // read source data
+        var day = 8;
 
-        switch (day){
+        // processing
+        String result;
+        switch (day) {
             case 1: {
-                System.out.println("Monday");
+                result = "Monday";
                 break;
             }
             case 2: {
-                System.out.println("Tuesday");
+                result = "Tuesday";
                 break;
             }
             case 3: {
-                System.out.println("Wednesday");
+                result = "Wednesday";
                 break;
             }
             case 4: {
-                System.out.println("Thursday");
+                result = "Thursday";
                 break;
             }
             case 5: {
-                System.out.println("Friday");
+                result = "Friday";
                 break;
             }
             case 6: {
-                System.out.println("Saturday");
+                result = "Saturday";
                 break;
             }
             case 7: {
-                System.out.println("Sunday");
+                result = "Sunday";
                 break;
             }
-            default:{
-                System.out.println("Invalid day: "+day);
+            default: {
+                result = "Invalid day: " + day;
             }
         }
+
+        // display results
+        System.out.println(result);
     }
 }

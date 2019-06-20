@@ -22,24 +22,30 @@ package academy.devonline.java.basic.section04_conditional;
  */
 public class WeekDay {
     public static void main(String[] args) {
-        var day = 1;
+        // read source data
+        var day = 70;
 
+        //processing
+        String result;
         if (day == 1) {
-            System.out.println("Monday");
+            result = "Monday";
         } else if (day == 2) {
-            System.out.println("Tuesday");
+            result = "Tuesday";
         } else if (day == 3) {
-            System.out.println("Wednesday");
+            result = "Wednesday";
         } else if (day == 4) {
-            System.out.println("Thursday");
+            result = "Thursday";
         } else if (day == 5) {
-            System.out.println("Friday");
+            result = "Friday";
         } else if (day == 6) {
-            System.out.println("Saturday");
+            result = "Saturday";
         } else if (day == 7) {
-            System.out.println("Sunday");
+            result = "Sunday";
         } else {
-            System.out.println("Invalid day: " + day);
+            result = "Invalid day: " + day;
         }
+
+        //display results
+        System.out.println(result);
     }
 }
