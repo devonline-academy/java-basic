@@ -34,10 +34,10 @@ public class UpdateIncrementDecrement {
         a += 3;
         System.out.println(a);
 
-        a ++;//a += 1 -> a = a + 1
+        a++;//a += 1 -> a = a + 1
         System.out.println(a);
 
-        a --;//a -= 1 -> a = a - 1
+        a--;//a -= 1 -> a = a - 1
         System.out.println(a);
 
         a *= 2;

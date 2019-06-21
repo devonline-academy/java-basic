@@ -34,11 +34,11 @@ public class SwapMinAndMaxArrayElement {
         var maxValue = array[0];
         for (int i = 1; i < array.length; i++) {
             var current = array[i];
-            if(current < minValue) {
+            if (current < minValue) {
                 minValue = current;
                 indexOfMinElement = i;
             }
-            if(current > maxValue) {
+            if (current > maxValue) {
                 maxValue = current;
                 indexOfMaxElement = i;
             }

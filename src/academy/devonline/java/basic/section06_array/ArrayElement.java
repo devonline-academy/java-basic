@@ -32,10 +32,10 @@ public class ArrayElement {
         array[0] = 45;
         System.out.println(Arrays.toString(array));
 
-        System.out.print(array[0]+" ");
-        System.out.print(array[1]+" ");
-        System.out.print(array[2]+" ");
-        System.out.print(array[3]+" ");
-        System.out.print(array[4]+" ");
+        System.out.print(array[0] + " ");
+        System.out.print(array[1] + " ");
+        System.out.print(array[2] + " ");
+        System.out.print(array[3] + " ");
+        System.out.print(array[4] + " ");
     }
 }

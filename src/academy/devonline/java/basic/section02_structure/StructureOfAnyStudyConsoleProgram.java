@@ -16,8 +16,6 @@
 
 package academy.devonline.java.basic.section02_structure;
 
-import java.util.Scanner;
-
 /**
  * @author devonline
  * @link http://devonline.academy/java-basic
