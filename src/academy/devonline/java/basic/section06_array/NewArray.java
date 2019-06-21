@@ -33,5 +33,10 @@ public class NewArray {
         boolean[] arrayWithSize3 = new boolean[5]; // false
         char[] arrayWithSize4 = new char[5]; // \u0000
         String[] arrayWithSize5 = new String[5]; // null
+
+        int[] emptyArray1 = {};
+        int[] emptyArray2 = new int[0];
+
+        int[] invalidArrayExample;
     }
 }
