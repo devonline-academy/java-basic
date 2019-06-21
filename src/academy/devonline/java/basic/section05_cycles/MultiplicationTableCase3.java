@@ -22,27 +22,17 @@ package academy.devonline.java.basic.section05_cycles;
  */
 public class MultiplicationTableCase3 {
     public static void main(String[] args) {
-        /*for (int i = 2; i < 10; i++) {
-            for (int j = 2; j < 6; j++) {
+        //display results
+        for (int i = 2; i <= 9; i++) {
+            for (int j = 2; j <= 5; j++) {
                 System.out.print(j + " * " + i + " = " + (i * j) + "\t");
             }
             System.out.println();
         }
         System.out.println();
-        for (int i = 2; i < 10; i++) {
-            for (int j = 6; j < 10; j++) {
+        for (int i = 2; i <= 9; i++) {
+            for (int j = 6; j <= 9; j++) {
                 System.out.print(j + " * " + i + " = " + (i * j) + "\t");
-            }
-            System.out.println();
-        }
-        System.out.println();*/
-
-        for (int k = 2; k <=6 ; k+=4) {
-            for (int i = 2; i < 10; i++) {
-                for (int j = k; j < 4 + k; j++) {
-                    System.out.print(j + " * " + i + " = " + (i * j) + "\t");
-                }
-                System.out.println();
             }
             System.out.println();
         }

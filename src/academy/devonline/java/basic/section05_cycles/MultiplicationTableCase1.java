@@ -22,8 +22,12 @@ package academy.devonline.java.basic.section05_cycles;
  */
 public class MultiplicationTableCase1 {
     public static void main(String[] args) {
-        for (int i = 1; i < 10; i++) {
-            for (int j = 1; j < 10; j++) {
+        // read source data
+        var to = 9;
+
+        //display results
+        for (int i = 1; i <= to; i++) {
+            for (int j = 1; j <= to; j++) {
                 var res = i * j;
                 System.out.print((res == 1 ? "" : res) + "\t");
             }

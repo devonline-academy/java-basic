@@ -28,12 +28,18 @@ public class GuessTheNumber {
         var number = new Random().nextInt(10);
 
         while (true) {
+            // read source data
             var userCase = new Scanner(System.in).nextInt();
+
+            // processing
             if (number > userCase) {
-                System.out.println("number > " + userCase + ". Try again: ");
+                // display results
+                System.out.println("number > " + userCase + ". Try again:");
             } else if (number < userCase) {
-                System.out.println("number < " + userCase + ". Try again: ");
+                // display results
+                System.out.println("number < " + userCase + ". Try again:");
             } else {
+                // display results
                 System.out.println("Congratulations, you guessed the number!");
                 break;
             }

@@ -22,21 +22,34 @@ package academy.devonline.java.basic.section05_cycles;
  */
 public class DoWhileVersion {
     public static void main(String[] args) {
-        // DisplayNumbersFrom100To1
+        // DisplayNumbersFrom100To1-------------------------------------------------------
         {
-            var i = 100;
-            do {
-                System.out.print(i-- + " ");
-            } while (i >= 1);
-            System.out.println();
-        }
-        // DisplayEvenNumbersFrom0To50
-        {
-            int i = 0;
+            // read source data
+            var from = 100;
+            var to = 1;
+            var step = 1;
+
+            // display results
+            int i = from;
             do {
                 System.out.print(i + " ");
-                i += 2;
-            } while (i <= 50);
+                i -= step;
+            } while (i >= to);
+            System.out.println();
+        }
+        // DisplayEvenNumbersFrom0To50----------------------------------------------------
+        {
+            // read source data
+            var from = 0;
+            var to = 50;
+            var step = 2;
+
+            // display results
+            var i = from;
+            do {
+                System.out.print(i + " ");
+                i += step;
+            } while (i <= to);
             System.out.println();
         }
     }

@@ -22,17 +22,19 @@ package academy.devonline.java.basic.section05_cycles;
  */
 public class NumberReverse {
     public static void main(String[] args) {
+        // read source data
         var number = 123456789;
-        var result = 0;
 
+        // processing
+        var result = 0;
         var temp = number;
         while (temp != 0) {
-            int digit = temp % 10;
+            var digit = temp % 10;
             result = result * 10 + digit;
             temp /= 10; // temp = temp / 10
         }
 
-        System.out.println("Source  number: " + number);
+        // display results
         System.out.println("Reverse number: " + result);
     }
 }

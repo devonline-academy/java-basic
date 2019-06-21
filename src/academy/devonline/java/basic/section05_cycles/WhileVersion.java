@@ -22,20 +22,33 @@ package academy.devonline.java.basic.section05_cycles;
  */
 public class WhileVersion {
     public static void main(String[] args) {
-        // DisplayNumbersFrom100To1
+        // DisplayNumbersFrom100To1-------------------------------------------------------
         {
-            var i = 100;
-            while (i >= 1) {
-                System.out.print(i-- + " ");
+            // read source data
+            var from = 100;
+            var to = 1;
+            var step = 1;
+
+            // display results
+            int i = from;
+            while (i >= to) {
+                System.out.print(i + " ");
+                i -= step;
             }
             System.out.println();
         }
-        // DisplayEvenNumbersFrom0To50
+        // DisplayEvenNumbersFrom0To50----------------------------------------------------
         {
-            int i = 0;
-            while (i <= 50) {
+            // read source data
+            var from = 0;
+            var to = 50;
+            var step = 2;
+
+            // display results
+            var i = from;
+            while (i <= to) {
                 System.out.print(i + " ");
-                i += 2;
+                i += step;
             }
             System.out.println();
         }
