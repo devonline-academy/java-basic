@@ -36,7 +36,8 @@ public class BinarySearchRecursive {
                                              int startIndex,
                                              int endIndex) {
         if (startIndex <= endIndex) {
-            int middleIndex = (startIndex + endIndex) / 2;
+            //int middleIndex = (startIndex + endIndex) / 2;
+            int middleIndex = (startIndex + endIndex) >>> 1;
             int middleValue = array[middleIndex];
             if (query > middleValue) {
                 return binarySearchRecursive(array, query, middleIndex + 1, endIndex);
