@@ -16,6 +16,7 @@
 
 package academy.devonline.java.basic.game;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -143,11 +144,22 @@ public class TicTackToe {
     }
 
     private static void makeUserProgress(int number) {
-
+        makeProgress(number, USER);
     }
 
     private static void makeComputerProgress() {
+        while (true) {
+            int number = new Random().nextInt(9) + 1;
+            if (isCellFree(number)) {
+                makeProgress(number, COMPUTER);
+                break;
+            }
+        }
+    }
 
+    private static void makeProgress(int number, char ch) {
+        var indexes = toIndexes(number);
+        GAME_TABLE[indexes[0]][indexes[1]] = ch;
     }
 
     private static boolean isWinner(char ch) {
