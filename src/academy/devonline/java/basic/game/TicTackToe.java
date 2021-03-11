@@ -36,7 +36,7 @@ public class TicTackToe {
 
     public static void main(String[] args) {
         printGameRules();
-        while (true) {
+        /*while (true) {
             int number = readUserInput();
             makeUserProgress(number);
             if (isWinner(USER)) {
@@ -57,17 +57,42 @@ public class TicTackToe {
                 System.out.println("Sorry, DRAW!");
                 break;
             }
-        }
+        }*/
         printGameTable();
         System.out.println("GAME OVER!");
     }
 
     private static void printGameRules() {
-
+        char[][] data = {
+                {'7', '8', '9'},
+                {'4', '5', '6'},
+                {'1', '2', '3'}
+        };
+        printData(data);
     }
 
     private static void printGameTable() {
+        printData(GAME_TABLE);
+    }
 
+    private static void printData(char[][] data) {
+        for (int i = 0; i < 3; i++) {
+            printHorizontalLine();
+            for (int j = 0; j < 3; j++) {
+                System.out.print("| " + data[i][j] + " ");
+                if (j == 2) {
+                    System.out.println("|");
+                }
+            }
+        }
+        printHorizontalLine();
+    }
+
+    private static void printHorizontalLine() {
+        for (int i = 0; i < 3; i++) {
+            System.out.print("----");
+        }
+        System.out.println("-");
     }
 
     private static int readUserInput() {
