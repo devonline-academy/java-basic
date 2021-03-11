@@ -16,6 +16,8 @@
 
 package academy.devonline.java.basic.game;
 
+import java.util.Scanner;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java-basic
@@ -36,7 +38,7 @@ public class TicTackToe {
 
     public static void main(String[] args) {
         printGameRules();
-        /*while (true) {
+        while (true) {
             int number = readUserInput();
             makeUserProgress(number);
             if (isWinner(USER)) {
@@ -57,7 +59,7 @@ public class TicTackToe {
                 System.out.println("Sorry, DRAW!");
                 break;
             }
-        }*/
+        }
         printGameTable();
         System.out.println("GAME OVER!");
     }
@@ -96,7 +98,17 @@ public class TicTackToe {
     }
 
     private static int readUserInput() {
-        return 0;
+        while (true) {
+            System.out.println("Please type number between 1 and 9:");
+            var userInput = new Scanner(System.in).nextLine();
+            if (userInput.length() == 1) {
+                var ch = userInput.charAt(0);
+                if (ch >= '1' && ch <= '9') {
+                    var number = Integer.parseInt(userInput);
+                    return number;
+                }
+            }
+        }
     }
 
     private static void makeUserProgress(int number) {
