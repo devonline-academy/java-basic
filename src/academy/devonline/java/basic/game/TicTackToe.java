@@ -163,7 +163,31 @@ public class TicTackToe {
     }
 
     private static boolean isWinner(char ch) {
-        return false;
+        for (int i = 0; i < 3; i++) {
+            if (GAME_TABLE[i][0] == GAME_TABLE[i][1] &&
+                    GAME_TABLE[i][1] == GAME_TABLE[i][2] &&
+                    GAME_TABLE[i][1] == ch) {
+                return true;
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            if (GAME_TABLE[0][i] == GAME_TABLE[1][i] &&
+                    GAME_TABLE[1][i] == GAME_TABLE[2][i] &&
+                    GAME_TABLE[1][i] == ch) {
+                return true;
+            }
+        }
+        if (GAME_TABLE[0][0] == GAME_TABLE[1][1] &&
+                GAME_TABLE[1][1] == GAME_TABLE[2][2] &&
+                GAME_TABLE[1][1] == ch) {
+            return true;
+        } else if (GAME_TABLE[2][0] == GAME_TABLE[1][1] &&
+                GAME_TABLE[1][1] == GAME_TABLE[0][2] &&
+                GAME_TABLE[1][1] == ch) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     private static boolean isDraw() {
