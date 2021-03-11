@@ -105,9 +105,40 @@ public class TicTackToe {
                 var ch = userInput.charAt(0);
                 if (ch >= '1' && ch <= '9') {
                     var number = Integer.parseInt(userInput);
-                    return number;
+                    if (isCellFree(number)) {
+                        return number;
+                    } else {
+                        System.out.println("Cell with number=" + number + " is not free!");
+                    }
                 }
             }
+        }
+    }
+
+    private static boolean isCellFree(int number) {
+        int[] indexes = toIndexes(number);
+        return GAME_TABLE[indexes[0]][indexes[1]] == EMPTY;
+    }
+
+    private static int[] toIndexes(int number) {
+        if (number == 1) {
+            return new int[]{2, 0};
+        } else if (number == 2) {
+            return new int[]{2, 1};
+        } else if (number == 3) {
+            return new int[]{2, 2};
+        } else if (number == 4) {
+            return new int[]{1, 0};
+        } else if (number == 5) {
+            return new int[]{1, 1};
+        } else if (number == 6) {
+            return new int[]{1, 2};
+        } else if (number == 7) {
+            return new int[]{0, 0};
+        } else if (number == 8) {
+            return new int[]{0, 1};
+        } else {
+            return new int[]{0, 2};
         }
     }
 
