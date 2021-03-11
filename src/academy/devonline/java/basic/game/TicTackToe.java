@@ -39,6 +39,10 @@ public class TicTackToe {
 
     public static void main(String[] args) {
         printGameRules();
+        if (new Random().nextBoolean()) {
+            makeComputerProgress();
+            printGameTable();
+        }
         while (true) {
             int number = readUserInput();
             makeUserProgress(number);
