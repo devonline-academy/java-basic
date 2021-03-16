@@ -76,7 +76,7 @@ public class VerifierForGitCommitMessages {
     }
 
     private static void verifyThatSubjectSeparatedFromBody(String[] lines) {
-        if (isBodyFound(lines) && !lines[1].isEmpty()) {
+        if (lines.length > 1 && !lines[1].isEmpty()) {
             System.out.println("Separate subject from body with a blank line!");
             System.exit(1);
         }
