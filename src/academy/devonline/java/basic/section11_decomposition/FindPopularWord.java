@@ -16,6 +16,8 @@
 
 package academy.devonline.java.basic.section11_decomposition;
 
+import java.util.Arrays;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java-basic
@@ -23,7 +25,7 @@ package academy.devonline.java.basic.section11_decomposition;
 public class FindPopularWord {
     public static void main(String[] args) {
         // read source data
-        String text = "hello java world java hello I Hello Java World java i i i I I i i";
+        String text = "hello,java-world\tjava    hello: I? Hello! Java World. java";
         // processing
         String word = findMostPopularWordInText(text);
         // display results
@@ -37,7 +39,24 @@ public class FindPopularWord {
     }
 
     private static String[] findAllWordsInText(String text) {
-        return text.split(" ");
+        //return text.split(" ");
+        String[] result = new String[text.length()];
+        int index = 0;
+
+        StringBuilder wordBuilder = new StringBuilder();
+        for (int i = 0; i < text.length(); i++) {
+            var ch = text.charAt(i);
+            if (Character.isLetter(ch) || Character.isDigit(ch)) {
+                wordBuilder.append(ch);
+            } else if (wordBuilder.length() > 0) {
+                result[index++] = wordBuilder.toString();
+                wordBuilder.setLength(0);
+            }
+        }
+        if (wordBuilder.length() > 0) {
+            result[index++] = wordBuilder.toString();
+        }
+        return Arrays.copyOf(result, index);
     }
 
     private static String[][] findUniqueWordsAndCounts(String[] words) {
@@ -46,7 +65,7 @@ public class FindPopularWord {
         int count = 0;
         for (String word : words) {
             var lowerCaseWord = word.toLowerCase();
-            if(!isAlreadyProcessed(uniqueWords, lowerCaseWord, count)) {
+            if (!isAlreadyProcessed(uniqueWords, lowerCaseWord, count)) {
                 int total = calculateWords(words, lowerCaseWord);
                 uniqueWords[count] = lowerCaseWord;
                 counts[count] = String.valueOf(total);
@@ -58,7 +77,7 @@ public class FindPopularWord {
 
     private static boolean isAlreadyProcessed(String[] uniqueWords, String word, int count) {
         for (int i = 0; i < count; i++) {
-            if(uniqueWords[i].equals(word)){
+            if (uniqueWords[i].equals(word)) {
                 return true;
             }
         }
@@ -68,7 +87,7 @@ public class FindPopularWord {
     private static int calculateWords(String[] words, String word) {
         int count = 0;
         for (String w : words) {
-            if(word.equalsIgnoreCase(w)) {
+            if (word.equalsIgnoreCase(w)) {
                 count++;
             }
         }
@@ -90,7 +109,7 @@ public class FindPopularWord {
         int maxCount = Integer.parseInt(uniqueWordsAndCounts[0][1]);
         for (int i = 1; i < uniqueWordsAndCounts.length; i++) {
             int currentCount = Integer.parseInt(uniqueWordsAndCounts[i][1]);
-            if(currentCount > maxCount) {
+            if (currentCount > maxCount) {
                 maxCount = currentCount;
                 word = uniqueWordsAndCounts[i][0];
             }
