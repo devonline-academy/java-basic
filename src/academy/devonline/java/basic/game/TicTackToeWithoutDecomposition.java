@@ -162,39 +162,39 @@ public class TicTackToeWithoutDecomposition {
                 indexes = new int[]{0, 2};
             }
             GAME_TABLE[indexes[0]][indexes[1]] = USER;
-            boolean isUserWinner = false;
+            boolean isWinner = false;
             for (int i = 0; i < 3; i++) {
                 if (GAME_TABLE[i][0] == GAME_TABLE[i][1] &&
                         GAME_TABLE[i][1] == GAME_TABLE[i][2] &&
                         GAME_TABLE[i][1] == USER) {
-                    isUserWinner = true;
+                    isWinner = true;
                     break;
                 }
             }
-            if (!isUserWinner) {
+            if (!isWinner) {
                 for (int i = 0; i < 3; i++) {
                     if (GAME_TABLE[0][i] == GAME_TABLE[1][i] &&
                             GAME_TABLE[1][i] == GAME_TABLE[2][i] &&
                             GAME_TABLE[1][i] == USER) {
-                        isUserWinner = true;
+                        isWinner = true;
                         break;
                     }
                 }
-                if (!isUserWinner) {
+                if (!isWinner) {
                     if (GAME_TABLE[0][0] == GAME_TABLE[1][1] &&
                             GAME_TABLE[1][1] == GAME_TABLE[2][2] &&
                             GAME_TABLE[1][1] == USER) {
-                        isUserWinner = true;
+                        isWinner = true;
                     } else if (GAME_TABLE[2][0] == GAME_TABLE[1][1] &&
                             GAME_TABLE[1][1] == GAME_TABLE[0][2] &&
                             GAME_TABLE[1][1] == USER) {
-                        isUserWinner = true;
+                        isWinner = true;
                     } else {
-                        isUserWinner = false;
+                        isWinner = false;
                     }
                 }
             }
-            if (isUserWinner) {
+            if (isWinner) {
                 System.out.println("YOU WIN!");
                 break;
             }
@@ -254,39 +254,39 @@ public class TicTackToeWithoutDecomposition {
                 System.out.print("----");
             }
             System.out.println("-");
-            boolean isComputerWinner = false;
+            isWinner = false;
             for (int i = 0; i < 3; i++) {
                 if (GAME_TABLE[i][0] == GAME_TABLE[i][1] &&
                         GAME_TABLE[i][1] == GAME_TABLE[i][2] &&
                         GAME_TABLE[i][1] == COMPUTER) {
-                    isComputerWinner = true;
+                    isWinner = true;
                     break;
                 }
             }
-            if (!isComputerWinner) {
+            if (!isWinner) {
                 for (int i = 0; i < 3; i++) {
                     if (GAME_TABLE[0][i] == GAME_TABLE[1][i] &&
                             GAME_TABLE[1][i] == GAME_TABLE[2][i] &&
                             GAME_TABLE[1][i] == COMPUTER) {
-                        isComputerWinner = true;
+                        isWinner = true;
                         break;
                     }
                 }
-                if (!isComputerWinner) {
+                if (!isWinner) {
                     if (GAME_TABLE[0][0] == GAME_TABLE[1][1] &&
                             GAME_TABLE[1][1] == GAME_TABLE[2][2] &&
                             GAME_TABLE[1][1] == COMPUTER) {
-                        isComputerWinner = true;
+                        isWinner = true;
                     } else if (GAME_TABLE[2][0] == GAME_TABLE[1][1] &&
                             GAME_TABLE[1][1] == GAME_TABLE[0][2] &&
                             GAME_TABLE[1][1] == COMPUTER) {
-                        isComputerWinner = true;
+                        isWinner = true;
                     } else {
-                        isComputerWinner = false;
+                        isWinner = false;
                     }
                 }
             }
-            if (isComputerWinner) {
+            if (isWinner) {
                 System.out.println("COMPUTER WIN!");
                 break;
             }
